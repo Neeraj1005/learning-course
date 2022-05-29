@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Dom Cardio</title>
+  <link rel="stylesheet" href="../../base.css">
+</head>
+
+<body>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Button1!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Button2!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Button3!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <script src="./DOM-Cardio.js"></script>
+</body>
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+  .playerCard {
+    background: #c08888;
+    padding: 20px;
+  }
+
+  .playerCard h2 {
+    color: rgb(41, 17, 17);
+  }
+
+  button {
+    border-radius: 6.5px;
+    cursor: pointer;
+    color:white;
+    background-color: rgb(86, 99, 216);
+  }
+</style>
+</html>

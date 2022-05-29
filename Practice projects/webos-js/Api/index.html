@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+  <link rel="stylesheet" href="../../base.css">
+  <link rel="stylesheet" href="./tabs-style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+   <p class="user"></p>
+  </div>
+  <script>
+  const userPara = document.querySelector('.user');
+  const baseEndPoint = `https://api.github.com`;
+  const usersEndPoint = `${baseEndPoint}/users`;
+  
+  async function displayUserInfo(username){
+    userPara.textContent = 'loading...';
+    const response = await fetch(`${usersEndPoint}/${username}`);
+    const data = await response.json();
+    console.log(data);
+    console.log(data.name);
+    userPara.textContent = `${data.name} - ${data.location}`;
+  }
+
+  function handleError(err) { 
+    userPara.textContent = `Something went wrong! ${err}`;
+  }
+
+  displayUserInfo('Neeraj1005').catch(handleError);
+  </script>
+</body>
+
+</html>
